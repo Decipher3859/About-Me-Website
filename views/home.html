@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ content.title }}</title>
-  <link href="css/style.css" rel="stylesheet">
-  {{> styles }}
-</head>
-<body>
-  {{> header }}
-  <main>
-    <h1>{{ content.heading }}</h1>
-    <p>{{ content.content }}</p>
-  </main>
-  {{> footer }}
-</body>
-</html>
+{{> header }}
+<main>
+  <div id="hero-banner">
+    <span id="hero-phrase">Ich mach euren Laden geiler.</span>
+    <img id="hero-image" src="../assets/img/hero-image.jpeg" alt="Hero Image" height="250vh">
+  </div>
+  <h1>{{ content.heading }}</h1>
+  <p>{{ content.content }}</p>
+</main>
+{{> footer }}

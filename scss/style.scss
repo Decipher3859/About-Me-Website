@@ -1,0 +1,75 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootstrap/scss/bootstrap-grid.scss";
+@import "../node_modules/bootstrap/scss/bootstrap-utilities.scss";
+
+$midnight-blue: #1e2030;
+$blue-grey: #7f85a3;
+$black: #444a73;
+$red: #ff5370;
+$green: #4fd6be;
+$yellow: #ffc777;
+$blue: #3e68d7;
+$magenta: #fc7b7b;
+$cyan: #86e1fc;
+$white: #d0d0d0;
+
+body {
+  background-color: $midnight-blue;
+  color: $white;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 70%;
+  margin-inline: auto;
+}
+
+h1 {
+  margin: 5vh;
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $cyan;
+}
+
+
+header,
+footer {
+  background-color: $black;
+}
+
+.navbar-brand {
+  margin-left: 15px;
+}
+
+.form-inline {
+  display: flex;
+  flex-direction: row;
+}
+
+#hero-banner {
+  display: flex;
+  width: 100vw;
+  background-color: $blue-grey;
+  justify-content: space-between;
+}
+
+#hero-phrase {
+  padding: 5vw;
+}
+
+#hero-image {
+  margin-right: 2vw;
+}
+
+#impressum {
+  max-width: 70%;
+}

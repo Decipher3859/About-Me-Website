@@ -38,15 +38,19 @@ class Templates
       case '/home':
         $data['content'] = [
           'title' => 'Home',
-          'heading' => 'Welcome to the home page!',
-          'content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+          'heading' => 'Diese Seite befindet sich im Aufbau!',
         ];
         break;
       case '/contact':
         $data['content'] = [
           'title' => 'Kontakt',
           'heading' => 'Welcome to the contact page!',
-          'content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        ];
+        break;
+      case '/impressum':
+        $data['content'] = [
+          'title' => 'Impressum',
+          'heading' => 'Impressum',
         ];
         break;
       default:

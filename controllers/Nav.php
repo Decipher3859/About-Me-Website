@@ -8,7 +8,8 @@ class Nav
     $header = [
       'links' => [
         ['url' => '/', 'name' => 'Home'],
-        ['url' => '/about', 'name' => 'About'],
+        ['url' => '/skills', 'name' => 'Meine Skills'],
+        ['url' => '/arbeitsweise', 'name' => 'Meine Arbeitsweise'],
       ]
     ];
     return $header;
