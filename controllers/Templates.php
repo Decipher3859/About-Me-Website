@@ -41,6 +41,20 @@ class Templates
           'heading' => 'Diese Seite befindet sich im Aufbau!',
         ];
         break;
+      case '/skills':
+        $data['content'] = [
+          'title' => 'Meine Skills',
+          'heading' => 'Meine Skills',
+          'content' => 'Eine Sammlung meiner Fähigkeiten.'
+        ];
+        break;
+      case '/devlog':
+        $data['content'] = [
+          'title' => 'Meine Arbeitsweise',
+          'heading' => 'Meine Arbeitsweise',
+          'content' => 'Hier dokumentiere ich den Aufbau dieser Website.'
+        ];
+        break;
       case '/contact':
         $data['content'] = [
           'title' => 'Kontakt',

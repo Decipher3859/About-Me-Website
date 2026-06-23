@@ -1,0 +1,68 @@
+{{> header }}
+
+<h1>{{ content.heading }}</h1>
+<p>{{ content.content }}</p>
+<div id="accordion-root" class="accordion">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingone">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseone"
+        aria-expanded="true" aria-controls="collapseone">
+        <h2>Anwendungsentwicklung</h2>
+      </button>
+    </h2>
+    <div id="collapseone" class="accordion-collapse collapse show" aria-labelledby="headingone"
+      data-bs-parent="#accordion-root">
+      <div class="accordion-body">
+
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingtwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetwo"
+        aria-expanded="false" aria-controls="collapsetwo">
+        2026-06-12 Projektinitialisierung
+      </button>
+    </h2>
+    <div id="collapsetwo" class="accordion-collapse collapse" aria-labelledby="headingtwo"
+      data-bs-parent="#accordion-root">
+      <div class="accordion-body">
+        <p>Zunächst muss ich mir ein paar Dinge klar machen.</p>
+        <h4>Was möchte ich mit dem Projekt bezwecken?</h4>
+        <p>Die Website ist Teil meiner Bewerbung und soll mich, meine Fähigkeiten und meine Arbeitsweise repräsentieren.
+        </p>
+        <h4>Wie umfangreich gestalte ich das Projekt?</h4>
+        <p>In 11 Tagen beginnt meine Ausbildung am <a href="https://www.bfw-dortmund.de/">BFW Dortmund</a>. In den
+          ersten
+          Wochen gibt
+          es noch einmal ein intensives Bewerbungstraining und nach spätestens 2 Wochen verschicke ich die ersten
+          Bewerbungen. Für eine ordentliche Basis der Website habe ich also ca. 3 Wochen Zeit.</p>
+        <p>ich möchte zwar auch mit der Website selbst meinen aktuellen Stand zeigen. Der Fokus liegt aber auf den
+          Inhalten. Außerdem habe ich eine relativ klare Deadline. Ich sollte also vor allem die Basics vernünftig
+          umsetzen und in späteren Iterationen überlegen, inwiefern es sich anbietet zu skalieren.</p>
+        <h4>Welche Technologie setze ich ein?</h4>
+        <p>Es geht hier um eine schlanke, statische Website. Das wichtigste wird daher das Styling. Da ich noch nie mit
+          <a href="https://getbootstrap.com">Bootstrap</a> gearbeitet habe, arbeite ich mich da rein. Für das Routing
+          und dynamische Inhalte nutze ich PHP.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingthree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsethree"
+        aria-expanded="false" aria-controls="collapsethree">
+        2026-06-10 Entwurf
+      </button>
+    </h2>
+    <div id="collapsethree" class="accordion-collapse collapse" aria-labelledby="headingthree"
+      data-bs-parent="#accordion-root">
+      <div class="accordion-body">
+        <p>Websites habe ich noch nie wirklich gestaltet. Deswegen halte ich das Design erstmal sehr schlicht. Für den
+          Anfang reicht ein One Pager mit einem Akkordion-Menü.</p>
+        <img class="img-thumbnail mx-auto d-block" src="../assets/img/devlog/entwurf-landingpage.png">
+      </div>
+    </div>
+  </div>
+</div>
+{{> footer }}

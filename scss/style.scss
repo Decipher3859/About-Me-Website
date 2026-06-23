@@ -1,6 +1,4 @@
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
-@import "../node_modules/bootstrap/scss/bootstrap-grid.scss";
-@import "../node_modules/bootstrap/scss/bootstrap-utilities.scss";
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 $midnight-blue: #1e2030;
 $blue-grey: #7f85a3;
@@ -40,7 +38,6 @@ a:hover {
   color: $cyan;
 }
 
-
 header,
 footer {
   background-color: $black;
@@ -58,12 +55,13 @@ footer {
 #hero-banner {
   display: flex;
   width: 100vw;
+  margin: 0;
   background-color: $blue-grey;
   justify-content: space-between;
 }
 
 #hero-phrase {
-  padding: 5vw;
+  padding: 0vw;
 }
 
 #hero-image {
@@ -72,4 +70,10 @@ footer {
 
 #impressum {
   max-width: 70%;
+}
+
+.accordion img {
+  max-height: 500px;
+  width: auto;
+  height: auto;
 }

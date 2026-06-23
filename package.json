@@ -4,7 +4,10 @@
   "description": "Auf dieser Website möchte ich mich und meinen Werdegang als Anwendungsentwickler vorstellen.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "php": "php -S localhost:8000",
+    "sass": "sass --watch scss/style.scss:scss/style.css",
+    "serve": "browser-sync start --proxy localhost:8000 --files '**/*.php, **/*.html, **/*.css, **/*.js, **/*.mustache'",
+    "dev": "concurrently \"npm run php\" \"npm run sass\" \"npm run serve\""
   },
   "repository": {
     "type": "git",
@@ -18,7 +21,11 @@
   },
   "homepage": "https://github.com/Decipher3859/About-Me-Website#readme",
   "dependencies": {
-    "bootstrap": "^5.3.8",
+    "bootstrap": "^5.3.8"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "concurrently": "^10.0.3",
     "sass": "^1.101.0"
   }
 }
