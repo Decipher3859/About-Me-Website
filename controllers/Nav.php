@@ -9,7 +9,6 @@ class Nav
       'links' => [
         ['url' => '/', 'name' => 'Home'],
         ['url' => '/skills', 'name' => 'Meine Skills'],
-        ['url' => '/devlog', 'name' => 'Meine Arbeitsweise'],
       ]
     ];
     return $header;
