@@ -1,79 +1,10 @@
 {{> header }}
-<section class="content">
-
-  <ul>
-    <li>
-      <span class="tree-node-1">Programmiersprachen und Projekte</span>
-    </li>
-    <ul>
-      <li><img class="tree-icon" src="../assets/icons/cplusplus-original.svg" alt="cplusplus-icon"> <span
-          class="tree-node-2 tree-content">C++</span></li>
-      <ul>
-        <li><span class="tree-content">Software und Hardware einer digitalen Wort-Uhr</span><a class="tree-comment"><img
-              class="tree-icon" src="../assets/icons/github-original.svg" alt="github-icon">Zum Quellcode</a></li>
-        </li>
-      </ul>
-      <li><img class="tree-icon" src="../assets/icons/csharp-original.svg" alt="csharp-icon"><span
-          class="tree-node-2 tree-content">C#</span></li>
-      <ul>
-        <li><span class="tree-content">Prototyp eines Dokumentenverwaltungsmoduls</span><span class="tree-comment">Im
-            Rahmen eines Betriebspraktikums</span></li>
-      </ul>
-      <li><img class="tree-icon" src="../assets/icons/flutter-original.svg" alt="flutter-icon"><span
-          class="tree-node-2 tree-content">Flutter</span></li>
-      <ul>
-        <li><span class="tree-content">Habit-Tracker für Android
-          </span><a class="tree-comment"><img class="tree-icon" src="../assets/icons/github-original.svg"
-              alt="github-icon">Zum Quellcode</a></li>
-      </ul>
-      <li><img class="tree-icon" src="../assets/icons/html5-original.svg" alt="html5-icon"><img class="tree-icon"
-          src="../assets/icons/css3-original.svg" alt="css3-icon"><img class="tree-icon"
-          src="../assets/icons/javascript-original.svg" alt="javascript-icon"><span
-          class="tree-node-2 tree-content">Webentwicklung</span>
-      </li>
-
-      <ul>
-        <li><img class="tree-icon" src="../assets/icons/php-original.svg" alt="php-icon" <span
-            class="tree-content">Web-Portfolio
-          </span><a class="tree-comment" href="https://github.com/Decipher3859/About-Me-Website" target="_blank"
-            rel="noopener noreferrer"><img class="tree-icon" src="../assets/icons/github-original.svg"
-              alt="github-icon">Zum Quellcode</a></li>
-        <li><img class="tree-icon" src="../assets/icons/firefox-plain-wordmark.svg" alt="firefox-icon"><span
-            class="tree-content">Browser-Erweiterung für Bionic Reading Implementierung
-          </span><a class="tree-comment" href="https://github.com/Decipher3859/read_cheat" target="_blank"
-            rel="noopener noreferrer"><img class="tree-icon" src="../assets/icons/github-original.svg"
-              alt="github-icon">Zum Quellcode</a></li>
-        <li><img class="tree-icon" src="../assets/icons/wordpress-original.svg" alt="wordpress-icon"><span
-            class="tree-content">WordPress-Plugin zum Erstellen von Fragebögen
-          </span><a class="tree-comment"><img class="tree-icon" src="../assets/icons/github-original.svg"
-              alt="github-icon">Zum Quellcode</a></li>
-      </ul>
-    </ul>
-    <li>
-      <span class="tree-node-1">Administration</span>
-    </li>
-    <ul>
-
-      <li><span class="tree-content">Einrichtung von Netzwerk und Serveranwendungen für Therapiepraxen</span></li>
-      <li><span class="tree-node-2 tree-content">Betrieb eines Home-Servers</span></li>
-      <ul>
-
-        <li><span class="tree-node-3 tree-content">Docker-Containerisierung</span></li>
-        <ul>
-          <li><span class="tree-content">Jellyfin</span></li>
-          <li><span class="tree-content">paperless NGX</span></li>
-          <li><span class="tree-content">PiHole</span></li>
-
-        </ul>
-      </ul>
-    </ul>
-
-    <li>
-      <span class="tree-node-1">Versionierung</span>
-    </li>
-    <ul>
-
-    </ul>
+<section class="content skills-tree">
+  <h1 class="skills-tree-title">Mein Skilltree</h1>
+  <ul class="skills-tree-list">
+    {{# tree }}
+      {{> tree-node }}
+    {{/ tree }}
   </ul>
 </section>
 

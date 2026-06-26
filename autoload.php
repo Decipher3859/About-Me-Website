@@ -1,7 +1,7 @@
 <?php
 function autoload($class)
 {
-  include 'controllers/' . $class . '.php';
+  include __DIR__ . '/controllers/' . $class . '.php';
 }
 
 spl_autoload_register('autoload');

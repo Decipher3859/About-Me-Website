@@ -8,7 +8,7 @@ class Templates
   {
     $this->m = (new \Mustache\Engine(
       [
-        'partials_loader' => new \Mustache\Loader\FilesystemLoader('views/partials'),
+        'partials_loader' => new \Mustache\Loader\FilesystemLoader(__DIR__ . '/../views/partials'),
       ]
     ));
     $this->nav = new Nav();
@@ -16,17 +16,21 @@ class Templates
 
   public function render($template, $data)
   {
-    $template = @file_get_contents('views' .
-      $template . '.html');
+    $template = @file_get_contents(__DIR__ . '/../views' . $template . '.html');
     if ($template === false) {
-      $template = file_get_contents('views/404.html');
+      $template = file_get_contents(__DIR__ . '/../views/404.html');
     }
     return $this->m->render($template, $data);
   }
 
+  /**
+   * Erzeugt URLs der Unterseiten
+   * @return string
+   */
   public function getPageURL()
   {
-    $url = explode('?', $_SERVER['REQUEST_URI']);
+    $requestUri = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '/';
+    $url = explode('?', $requestUri);
     return ($url[0] == '/' ? '/home' : $url[0]);
   }
 

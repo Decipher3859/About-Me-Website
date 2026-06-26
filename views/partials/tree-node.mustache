@@ -1,0 +1,53 @@
+<li data-search="{{ content }} {{ comment }} {{ repo }}">
+  {{# has-children }}
+  <details>
+    <summary>
+      {{# has-icon }}
+      <img class="tree-icon" src="../../assets/icons/{{ icon }}" alt="devicon">
+      {{/ has-icon }}
+
+      {{# has-content }}
+      {{# is-heading }}
+      <h2 class="tree-content {{ class }}">{{ content }}</h2>
+      {{/ is-heading }}
+      {{^ is-heading }}
+      <span class="tree-content {{ class }}">{{ content }}</span>
+      {{/ is-heading }}
+      {{/ has-content }}
+
+      {{# has-comment }}
+      <span class="tree-comment">{{ comment }}</span>
+      {{/ has-comment }}
+
+      {{# has-repo }}
+ <a href="https://github.com/Decipher3859/{{ repo }}"><img src="../../assets/icons/github-original.svg" alt="github-icon">Zum Quellcode</a>
+      {{/ has-repo }}
+    </summary>
+
+    <ul>
+      {{# children }}
+      {{> tree-node }}
+      {{/ children }}
+    </ul>
+  </details>
+  {{/ has-children }}
+
+  {{^ has-children }}
+    {{# has-icon }}
+    <img class="tree-icon" src="../../assets/icons/{{ icon }}" alt="devicon">
+    {{/ has-icon }}
+
+    {{# has-content }}
+    {{# is-heading }}
+    <h2 class="tree-content {{ class }}">{{ content }}</h2>
+    {{/ is-heading }}
+    {{^ is-heading }}
+    <span class="tree-content {{ class }}">{{ content }}</span>
+    {{/ is-heading }}
+    {{/ has-content }}
+
+    {{# has-comment }}
+      <span class="tree-comment">{{ comment }} <a href="https://github.com/Decipher3859/{{ repo }}"><img src="../../assets/icons/github-original.svg" alt="github-icon"></a></span>
+    {{/ has-comment }}
+  {{/ has-children }}
+</li>

@@ -1,0 +1,337 @@
+{
+  "id": "skilltree",
+  "children": [
+    {
+      "is-heading": true,
+      "content": "Programmierung",
+      "children": [
+        {
+          "content": "Programmiersprachen",
+          "children": [
+            {
+              "icon": "csharp-original.svg",
+              "content": "C#",
+              "children": [
+                {
+                  "content": "Modul zur Verwaltung von Individuen im Artenschutz",
+                  "comment": "Im Rahmen eines Betriebspraktikums"
+                },
+                {
+                  "content": "Desktopanwendungen mit Datenbankanbindung"
+                }
+              ]
+            },
+            {
+              "icon": "cplusplus-original.svg",
+              "content": "C++",
+              "children": [
+                {
+                  "content": "Firmware einer digitalen Wort-Uhr",
+                  "repo": ""
+                }
+              ]
+            },
+            {
+              "icon": "dart-original.svg",
+              "content": "Dart",
+              "children": [
+                {
+                  "content": "Habit Tracker für Android"
+                }
+              ]
+            },
+            {
+              "icon": "javascript-original.svg",
+              "content": "JavaScript",
+              "children": [
+                {
+                  "content": "Bionic Reading Browser-Erweiterung",
+                  "repo": "read_cheat"
+                },
+                {
+                  "content": "Interaktive Webseiten"
+                }
+              ]
+            },
+            {
+              "icon": "php-original.svg",
+              "content": "PHP",
+              "children": [
+                {
+                  "content": "Portfolio-Website mit Mustache"
+                },
+                {
+                  "content": "WordPress-Anpassungen"
+                }
+              ]
+            },
+            {
+              "icon": "html5-original.svg",
+              "content": "HTML"
+            },
+            {
+              "icon": "css3-original.svg",
+              "content": "CSS"
+            },
+            {
+              "icon": "sass-original.svg",
+              "content": "SCSS"
+            },
+            {
+              "icon": "sqlite-original.svg",
+              "content": "SQL"
+            },
+            {
+              "icon": "bash-original.svg",
+              "content": "Bash"
+            }
+          ]
+        },
+        {
+          "content": "Softwareentwicklung",
+          "children": [
+            {
+              "content": "Objektorientierte Programmierung"
+            },
+            {
+              "content": "Datenmodellierung"
+            },
+            {
+              "content": "JSON"
+            },
+            {
+              "content": "YAML"
+            },
+            {
+              "content": "REST"
+            },
+            {
+              "content": "Template-Systeme",
+              "children": [
+                {
+                  "content": "Mustache"
+                }
+              ]
+            },
+            {
+              "content": "Konfigurationsmanagement"
+            }
+          ]
+        },
+        {
+          "content": "Frameworks",
+          "children": [
+            {
+              "icon": "flutter-original.svg",
+              "content": "Flutter"
+            },
+            {
+              "icon": "bootstrap-original.svg",
+              "content": "Bootstrap"
+            },
+            {
+              "content": "Material Design"
+            },
+            {
+              "content": "Mustache"
+            }
+          ]
+        },
+        {
+          "content": "Webentwicklung",
+          "children": [
+            {
+              "content": "Responsive Design"
+            },
+            {
+              "content": "Routing"
+            },
+            {
+              "content": "Formulare"
+            },
+            {
+              "content": "Deployment"
+            },
+            {
+              "content": "HTTPS"
+            }
+          ]
+        },
+        {
+          "content": "Desktopentwicklung",
+          "children": [
+            {
+              "content": "Windows Desktop"
+            },
+            {
+              "content": "WebView2"
+            },
+            {
+              "content": "Datenbankanbindung"
+            }
+          ]
+        },
+        {
+          "content": "Mobile Entwicklung",
+          "children": [
+            {
+              "content": "Android"
+            },
+            {
+              "content": "Flutter"
+            }
+          ]
+        },
+        {
+          "content": "Embedded",
+          "children": [
+            {
+              "content": "ESP8266"
+            },
+            {
+              "content": "Arduino"
+            },
+            {
+              "content": "NeoPixel"
+            },
+            {
+              "content": "DS3231 RTC"
+            },
+            {
+              "content": "Ereignissteuerung"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "is-heading": true,
+      "content": "Systemadministration",
+      "children": [
+        {
+          "content": "Linux"
+        },
+        {
+          "content": "Docker"
+        },
+        {
+          "content": "Docker Compose"
+        },
+        {
+          "content": "Synology DSM"
+        },
+        {
+          "content": "Reverse Proxy"
+        },
+        {
+          "content": "DNS"
+        },
+        {
+          "content": "SSH"
+        },
+        {
+          "content": "HTTPS"
+        },
+        {
+          "content": "Pi-hole"
+        },
+        {
+          "content": "WordPress"
+        },
+        {
+          "content": "Paperless-ngx"
+        },
+        {
+          "content": "Matrix Synapse"
+        }
+      ]
+    },
+    {
+      "is-heading": true,
+      "content": "Datenbanken",
+      "children": [
+        {
+          "content": "MariaDB"
+        },
+        {
+          "content": "Relationale Datenbanken"
+        },
+        {
+          "content": "Datenmodellierung"
+        }
+      ]
+    },
+    {
+      "is-heading": true,
+      "content": "Entwicklungswerkzeuge",
+      "children": [
+        {
+          "content": "Git"
+        },
+        {
+          "content": "GitHub"
+        },
+        {
+          "content": "Composer"
+        },
+        {
+          "content": "npm"
+        },
+        {
+          "content": "Sass"
+        },
+        {
+          "content": "Arduino CLI"
+        },
+        {
+          "content": "Language Server Protocol"
+        }
+      ]
+    },
+    {
+      "is-heading": true,
+      "content": "Entwicklungsumgebung",
+      "children": [
+        {
+          "content": "Neovim"
+        },
+        {
+          "content": "LazyVim"
+        },
+        {
+          "content": "tmux"
+        },
+        {
+          "content": "Kitty"
+        },
+        {
+          "content": "fzf"
+        },
+        {
+          "content": "ripgrep"
+        },
+        {
+          "content": "GNU Stow"
+        }
+      ]
+    },
+    {
+      "is-heading": true,
+      "content": "Projektmanagement",
+      "children": [
+        {
+          "content": "Scrum"
+        },
+        {
+          "content": "Kanban"
+        },
+        {
+          "content": "Sprintplanung"
+        },
+        {
+          "content": "Backlogmanagement"
+        }
+      ]
+    }
+  ]
+}
