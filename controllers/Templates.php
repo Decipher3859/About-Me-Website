@@ -43,28 +43,27 @@ class Templates
         break;
       case '/skills':
         $data['content'] = [
-          'title' => 'Meine Skills',
-          'heading' => 'Meine Skills',
-          'content' => 'Eine Sammlung meiner Fähigkeiten.'
+          'title' => 'Skills',
         ];
         break;
       case '/devlog':
         $data['content'] = [
           'title' => 'Meine Arbeitsweise',
-          'heading' => 'Meine Arbeitsweise',
-          'content' => 'Hier dokumentiere ich den Aufbau dieser Website.'
         ];
         break;
       case '/contact':
         $data['content'] = [
           'title' => 'Kontakt',
-          'heading' => 'Welcome to the contact page!',
         ];
         break;
       case '/impressum':
         $data['content'] = [
           'title' => 'Impressum',
-          'heading' => 'Impressum',
+        ];
+        break;
+      case '/privacy':
+        $data['content'] = [
+          'title' => 'Datenschutz',
         ];
         break;
       default:

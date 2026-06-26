@@ -1,7 +1,40 @@
 {{> header }}
 
-<h1>{{ content.heading }}</h1>
-<p>{{ content.content }}</p>
-{{> contact/form }}
+<section class="contact-page" aria-labelledby="contact-title">
+  <div class="contact-intro">
+    <p class="eyebrow">Kontakt</p>
+    <h1 id="contact-title">Lassen Sie uns ins Gespräch kommen</h1>
+    <p>Ob Feedback zur Seite, Einladung zum Vorstellungsgespräch oder eine konkrete Frage: schreiben Sie mir gerne.</p>
+  </div>
+
+  <div class="contact-layout">
+    <aside class="contact-panel" aria-label="Kontaktinformationen">
+      <div>
+        <span class="contact-kicker">Direkter Draht</span>
+        <h2>Schreiben Sie mir</h2>
+        <p>
+          Ich freue mich über den Austausch mit Ihnen.
+        </p>
+      </div>
+
+      <ul class="contact-list">
+        <li>
+          <span>E-Mail</span>
+          <a href="mailto:kontakt@damianschumachers.de">kontakt@damianschumachers.de</a>
+        </li>
+        <li>
+          <span>Standort</span>
+          <strong>Ruhrgebiet, Deutschland</strong>
+        </li>
+        <li>
+          <span>Antwortzeit</span>
+          <strong>1-2 Werktage</strong>
+        </li>
+      </ul>
+    </aside>
+
+    {{> contact/form }}
+  </div>
+</section>
 
 {{> footer }}

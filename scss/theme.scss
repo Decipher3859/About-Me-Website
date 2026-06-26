@@ -1,0 +1,15 @@
+@import 'variables.scss';
+
+:root {
+  font-family: $base-font;
+
+  @each $property, $value in map-get($themes, light) {
+    --color-#{$property}: #{$value};
+  }
+}
+
+[data-theme="dark"] {
+  @each $property, $value in map-get($themes, dark) {
+    --color-#{$property}: #{$value};
+  }
+}

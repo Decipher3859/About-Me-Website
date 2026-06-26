@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/Decipher3859/About-Me-Website#readme",
   "dependencies": {
-    "bootstrap": "^5.3.8"
+    "bootstrap": "^5.3.8",
+    "theme-toggles": "^4.10.1"
   },
   "devDependencies": {
     "browser-sync": "^3.0.4",

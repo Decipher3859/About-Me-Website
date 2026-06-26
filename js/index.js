@@ -1,3 +1,28 @@
+const html = document.documentElement;
+
+//--- THEME TOOGLE ---
+const themeToggle = document.querySelector('#theme-toggle');
+const savedTheme = localStorage.getItem('theme') || 'light';
+
+html.setAttribute('data-theme', savedTheme);
+updateThemeToggle(savedTheme);
+
+themeToggle.addEventListener('click', () => {
+  const currentTheme = html.getAttribute('data-theme');
+  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+  html.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+  updateThemeToggle(newTheme);
+})
+
+function updateThemeToggle(theme) {
+  const isDark = theme === 'dark';
+  themeToggle.classList.toggle('theme-toggle--toggled', isDark);
+  themeToggle.setAttribute('aria-label', isDark ? 'Change to light mode' : 'Change to dark mode');
+}
+
+//--- PRIVACY BANNER ---
 const privacyBanner = document.querySelector('[data-privacy-banner]');
 const privacyBannerButton = document.querySelector('[data-privacy-banner-button]');
 
