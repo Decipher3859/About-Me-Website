@@ -38,6 +38,7 @@ class Templates
   {
     $data['nav']['header'] = $this->nav->header();
     $data['nav']['footer'] = $this->nav->footer();
+    $data['asset_version'] = filemtime(__DIR__ . '/../scss/style.css');
     switch ($page) {
       case '/home':
         $data['content'] = [

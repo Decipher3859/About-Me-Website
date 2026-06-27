@@ -4,9 +4,9 @@
   "description": "Auf dieser Website möchte ich mich und meinen Werdegang als Anwendungsentwickler vorstellen.",
   "main": "index.js",
   "scripts": {
-    "php": "php -S localhost:8000",
+    "php": "php -S localhost:8005",
     "sass": "sass --watch scss/style.scss:scss/style.css",
-    "serve": "browser-sync start --proxy localhost:8000 --files '**/*.php, **/*.html, **/*.css, **/*.js, **/*.mustache'",
+    "serve": "browser-sync start --proxy localhost:8005 --files '**/*.php, **/*.html, **/*.css, **/*.js, **/*.mustache'",
     "dev": "concurrently \"npm run php\" \"npm run sass\" \"npm run serve\""
   },
   "repository": {

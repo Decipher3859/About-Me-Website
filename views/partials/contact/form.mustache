@@ -1,15 +1,27 @@
-<form action="" method="post">
-  <input type="text" name="name" id="name"
-  placeholder="Name">
-  <label for="name">Name</label>
-  <br>
-  <input type="text" name="email" id="email"
-  placeholder="Email">
-  <label for="name">Email</label>
-  <br>
-  <input type="text" name="phone" id="phone"
-  placeholder="Phone">
-  <label for="name">Phone</label>
-  <br>
-  <button name="submit" name="btnSubmit">Submit</button>
+<form class="contact-form" action="" method="post">
+  <div class="contact-form-header">
+    <p>Ob Feedback zur Seite, Einladung zum Vorstellungsgespräch oder eine konkrete Frage: schreiben Sie mir gerne.</p>
+  </div>
+
+  <div class="form-floating">
+    <input class="form-control" type="text" name="name" id="name" placeholder="Name" autocomplete="name" required>
+    <label for="name">Name</label>
+  </div>
+
+  <div class="form-floating">
+    <input class="form-control" type="email" name="email" id="email" placeholder="E-Mail" autocomplete="email" required>
+    <label for="email">E-Mail</label>
+  </div>
+
+  <div class="form-floating">
+    <input class="form-control" type="tel" name="phone" id="phone" placeholder="Telefon" autocomplete="tel">
+    <label for="phone">Telefon</label>
+  </div>
+
+  <div class="form-floating">
+    <textarea class="form-control" name="message" id="message" placeholder="Ihre Nachricht" required></textarea>
+    <label for="message">Ihre Nachricht</label>
+  </div>
+
+  <button class="btn btn-primary contact-submit" type="submit" name="btnSubmit">Nachricht senden</button>
 </form>
