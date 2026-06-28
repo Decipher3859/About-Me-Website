@@ -6,6 +6,7 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Attribute' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'Mustache_Cache' => $vendorDir . '/mustache/mustache/src/compat.php',
     'Mustache_Cache_AbstractCache' => $vendorDir . '/mustache/mustache/src/compat.php',
@@ -43,4 +44,8 @@ return array(
     'Mustache_Source_FilesystemSource' => $vendorDir . '/mustache/mustache/src/compat.php',
     'Mustache_Template' => $vendorDir . '/mustache/mustache/src/compat.php',
     'Mustache_Tokenizer' => $vendorDir . '/mustache/mustache/src/compat.php',
+    'PhpToken' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/PhpToken.php',
+    'Stringable' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
+    'UnhandledMatchError' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
+    'ValueError' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
 );

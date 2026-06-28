@@ -9,81 +9,136 @@
           "content": "Programmiersprachen",
           "children": [
             {
+              "icon": "bash-original.svg",
+              "content": "Bash",
+              "comment": "Syntax grundsätzlich verständlich; bisher vor allem vorhandene Skripte und Beispiele angepasst."
+            },
+            {
               "icon": "csharp-original.svg",
               "content": "C#",
+              "comment": "Langjährige Begleitung; schnelle Orientierung in bestehenden Projekten und Codebasen.",
               "children": [
                 {
-                  "content": "Modul zur Verwaltung von Individuen im Artenschutz",
-                  "comment": "Im Rahmen eines Betriebspraktikums"
-                },
-                {
-                  "content": "Desktopanwendungen mit Datenbankanbindung"
+                  "content": "Projekte",
+                  "children": [
+                    {
+                      "content": "Desktopanwendungen mit Datenbankanbindung",
+                      "comment": "Experimentelle, nicht abgeschlossene Projekte; relevante Lernerfahrung mit .NET, Desktopentwicklung und Datenbankanbindung."
+                    },
+                    {
+                      "content": "Modul zur Verwaltung von Individuen im Artenschutz",
+                      "comment": "Sehr fundierte Projekterfahrung; Logik, Struktur und fachliche Zusammenhänge sind gut präsent."
+                    }
+                  ],
+                  "class": "project-group"
                 }
               ]
             },
             {
               "icon": "cplusplus-original.svg",
               "content": "C++",
+              "comment": "Ältere Sprachkonzepte waren zunächst ungewohnt, wurden im Projektverlauf aber klarer.",
               "children": [
                 {
-                  "content": "Firmware einer digitalen Wort-Uhr",
-                  "repo": ""
+                  "content": "Projekte",
+                  "children": [
+                    {
+                      "content": "Firmware einer digitalen Wort-Uhr",
+                      "comment": "Logische Konzepte selbst erarbeitet; bei wachsender Codebasis KI-Unterstützung für Strukturierung und Aufteilung genutzt."
+                    }
+                  ],
+                  "class": "project-group"
                 }
               ]
+            },
+            {
+              "icon": "css3-original.svg",
+              "content": "CSS",
+              "comment": "Solide Kenntnisse, aber kein gestalterischer Schwerpunkt."
             },
             {
               "icon": "dart-original.svg",
               "content": "Dart",
+              "comment": "Syntax grundsätzlich schnell verstanden, aber nicht aktiv verinnerlicht.",
               "children": [
                 {
-                  "content": "Habit Tracker für Android"
+                  "content": "Projekte",
+                  "children": [
+                    {
+                      "content": "RiseUp Habit Tracker",
+                      "comment": "Funktionaler Prototyp; aktuell pausiert, aber weiterhin relevant."
+                    }
+                  ],
+                  "class": "project-group"
                 }
               ]
             },
             {
+              "icon": "html5-original.svg",
+              "content": "HTML",
+              "comment": "Sicherer Umgang."
+            },
+            {
               "icon": "javascript-original.svg",
               "content": "JavaScript",
+              "comment": "Gute Orientierung und solide Kenntnisse.",
               "children": [
                 {
-                  "content": "Bionic Reading Browser-Erweiterung",
-                  "repo": "read_cheat"
-                },
-                {
-                  "content": "Interaktive Webseiten"
+                  "content": "Projekte",
+                  "children": [
+                    {
+                      "content": "Interaktive Webseiten"
+                    },
+                    {
+                      "content": "Read Cheat",
+                      "comment": "Browser-Erweiterung zur Implementierung von Bionic-Reading-Unterstützung.",
+                      "repo": "read_cheat"
+                    }
+                  ],
+                  "class": "project-group"
                 }
               ]
             },
             {
               "icon": "php-original.svg",
               "content": "PHP",
+              "comment": "Gelegentlicher Begleiter; aktuell vertiefte Einarbeitung durch diese Website.",
               "children": [
                 {
-                  "content": "Portfolio-Website mit Mustache"
-                },
-                {
-                  "content": "WordPress-Anpassungen"
+                  "content": "Projekte",
+                  "children": [
+                    {
+                      "content": "Portfolio-Website",
+                      "comment": "Als Arbeitsprobe im Rahmen meiner Umschulung. <a href=\"/contact\">Melden Sie sich bei mir!</a>"
+                    },
+                    {
+                      "content": "wp_questionnaire_builder",
+                      "comment": "WordPress-Plugin zum Erstellen von Online-Fragebögen."
+                    }
+                  ],
+                  "class": "project-group"
                 }
               ]
             },
             {
-              "icon": "html5-original.svg",
-              "content": "HTML"
+              "icon": "python-original.svg",
+              "content": "Python",
+              "comment": "Vor allem für Prototypen und Experimente genutzt."
             },
             {
-              "icon": "css3-original.svg",
-              "content": "CSS"
+              "icon": "rust-original.svg",
+              "content": "Rust",
+              "comment": "Bisher vor allem Tutorial- und Lernprojekte."
             },
             {
               "icon": "sass-original.svg",
-              "content": "SCSS"
+              "content": "SCSS",
+              "comment": "Mit dieser Website neu kennengelernt."
             },
             {
               "icon": "sqlite-original.svg",
-              "content": "SQL"
-            },
-            {
-              "icon": "bash-original.svg",
-              "content": "Bash"
+              "content": "SQL",
+              "comment": "Grundlegende Abfragen und Verknüpfungen sicher anwendbar."
             }
           ]
         },
@@ -97,10 +152,22 @@
               "content": "Datenmodellierung"
             },
             {
+              "icon": "json-original.svg",
               "content": "JSON"
             },
             {
+              "icon": "yaml-original.svg",
               "content": "YAML"
+            },
+            {
+              "icon": "markdown-original.svg",
+              "content": "Markdown"
+            },
+            {
+              "content": "Serde"
+            },
+            {
+              "content": "color-eyre"
             },
             {
               "content": "REST"
@@ -123,11 +190,27 @@
           "children": [
             {
               "icon": "flutter-original.svg",
-              "content": "Flutter"
+              "content": "Flutter",
+              "comment": "Besonders interessant durch das Widget-System."
             },
             {
               "icon": "bootstrap-original.svg",
               "content": "Bootstrap"
+            },
+            {
+              "icon": "dotnetcore-original.svg",
+              "content": ".NET"
+            },
+            {
+              "icon": "nodejs-original.svg",
+              "content": "Node.js"
+            },
+            {
+              "content": "Raylib"
+            },
+            {
+              "icon": "godot-original.svg",
+              "content": "Godot"
             },
             {
               "content": "Material Design"
@@ -154,6 +237,15 @@
             },
             {
               "content": "HTTPS"
+            },
+            {
+              "content": "Browserextensions"
+            },
+            {
+              "content": "Manifest V3"
+            },
+            {
+              "content": "Content Scripts"
             }
           ]
         },
@@ -161,13 +253,24 @@
           "content": "Desktopentwicklung",
           "children": [
             {
+              "icon": "windows11-original.svg",
               "content": "Windows Desktop"
+            },
+            {
+              "content": "WPF",
+              "comment": "Im Kontext von C#/.NET-Desktopentwicklung relevant."
             },
             {
               "content": "WebView2"
             },
             {
               "content": "Datenbankanbindung"
+            },
+            {
+              "content": "Terminal UI"
+            },
+            {
+              "content": "Crossterm"
             }
           ]
         },
@@ -175,6 +278,7 @@
           "content": "Mobile Entwicklung",
           "children": [
             {
+              "icon": "android-original.svg",
               "content": "Android"
             },
             {
@@ -189,6 +293,7 @@
               "content": "ESP8266"
             },
             {
+              "icon": "arduino-original.svg",
               "content": "Arduino"
             },
             {
@@ -209,9 +314,15 @@
       "content": "Systemadministration",
       "children": [
         {
+          "icon": "linuxmint-original.svg",
           "content": "Linux"
         },
         {
+          "icon": "debian-original.svg",
+          "content": "Debian"
+        },
+        {
+          "icon": "docker-original.svg",
           "content": "Docker"
         },
         {
@@ -221,12 +332,21 @@
           "content": "Synology DSM"
         },
         {
+          "icon": "apache-original.svg",
+          "content": "Apache"
+        },
+        {
+          "icon": "nginx-original.svg",
+          "content": "Nginx"
+        },
+        {
           "content": "Reverse Proxy"
         },
         {
           "content": "DNS"
         },
         {
+          "icon": "ssh-original.svg",
           "content": "SSH"
         },
         {
@@ -236,6 +356,7 @@
           "content": "Pi-hole"
         },
         {
+          "icon": "wordpress-original.svg",
           "content": "WordPress"
         },
         {
@@ -243,6 +364,9 @@
         },
         {
           "content": "Matrix Synapse"
+        },
+        {
+          "content": "VirtualBox"
         }
       ]
     },
@@ -251,7 +375,12 @@
       "content": "Datenbanken",
       "children": [
         {
+          "icon": "mariadb-original.svg",
           "content": "MariaDB"
+        },
+        {
+          "icon": "mysql-original.svg",
+          "content": "MySQL"
         },
         {
           "content": "Relationale Datenbanken"
@@ -266,25 +395,45 @@
       "content": "Entwicklungswerkzeuge",
       "children": [
         {
+          "icon": "git-original.svg",
           "content": "Git"
         },
         {
+          "icon": "github-original.svg",
           "content": "GitHub"
         },
         {
+          "icon": "composer-original.svg",
           "content": "Composer"
         },
         {
+          "icon": "npm-original-wordmark.svg",
           "content": "npm"
         },
         {
+          "icon": "filezilla-original.svg",
+          "content": "FileZilla"
+        },
+        {
+          "icon": "sass-original.svg",
           "content": "Sass"
+        },
+        {
+          "icon": "firefox-original.svg",
+          "content": "Firefox"
+        },
+        {
+          "icon": "firefox-plain-wordmark.svg",
+          "content": "Firefox-Erweiterungen"
         },
         {
           "content": "Arduino CLI"
         },
         {
           "content": "Language Server Protocol"
+        },
+        {
+          "content": "Cargo"
         }
       ]
     },
@@ -293,12 +442,18 @@
       "content": "Entwicklungsumgebung",
       "children": [
         {
+          "icon": "neovim-original.svg",
           "content": "Neovim"
+        },
+        {
+          "icon": "vscodium-original.svg",
+          "content": "VSCodium"
         },
         {
           "content": "LazyVim"
         },
         {
+          "icon": "tmux-original.svg",
           "content": "tmux"
         },
         {

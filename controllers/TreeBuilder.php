@@ -35,15 +35,36 @@ class TreeBuilder
   public function compileTreeView(array $nodes)
   {
     foreach ($nodes as &$node) {
+      $projectGroups = [];
+      $treeChildren = [];
+
+      foreach (($node['children'] ?? []) as $child) {
+        if (($child['class'] ?? '') === 'project-group') {
+          $projectGroups[] = $child;
+          continue;
+        }
+
+        $treeChildren[] = $child;
+      }
+
+      $node['children'] = $treeChildren;
+      $node['project-groups'] = $projectGroups;
+
       $node['is-heading'] = !empty($node['is-heading']);
       $node['has-icon'] = !empty($node['icon']);
       $node['has-content'] = !empty($node['content']);
       $node['has-comment'] = !empty($node['comment']);
       $node['has-repo'] = !empty($node['repo']);
-      $node['has-children'] = !empty($node['children']);
+      $node['has-tree-children'] = !empty($node['children']);
+      $node['has-project-groups'] = !empty($node['project-groups']);
+      $node['has-children'] = $node['has-tree-children'];
 
-      if ($node['has-children']) {
+      if ($node['has-tree-children']) {
         $node['children'] = $this->compileTreeView($node['children']);
+      }
+
+      if ($node['has-project-groups']) {
+        $node['project-groups'] = $this->compileTreeView($node['project-groups']);
       }
     }
 

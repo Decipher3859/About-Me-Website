@@ -39,3 +39,31 @@ if (privacyBanner && privacyBannerButton) {
   })
 }
 
+//--- SKILLTREE PROJECT GROUPS ---
+document.querySelectorAll('.node-project-toggle').forEach((toggle) => {
+  toggle.addEventListener('click', (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+
+    const projectList = toggle.nextElementSibling;
+    if (!projectList) {
+      return;
+    }
+
+    const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!isExpanded));
+    projectList.hidden = isExpanded;
+  });
+});
+
+document.querySelectorAll('.node-project-list').forEach((projectList) => {
+  projectList.addEventListener('click', (event) => {
+    event.stopPropagation();
+  });
+});
+
+document.querySelectorAll('.node-repo-link').forEach((repoLink) => {
+  repoLink.addEventListener('click', (event) => {
+    event.stopPropagation();
+  });
+});

@@ -1,25 +1,38 @@
-<form class="contact-form" action="" method="post">
+<form class="contact-form" action="/contact/send" method="POST">
   <div class="contact-form-header">
     <p>Ob Feedback zur Seite, Einladung zum Vorstellungsgespräch oder eine konkrete Frage: schreiben Sie mir gerne.</p>
   </div>
 
-  <div class="form-floating">
+  <div class="form-floating mb-3">
     <input class="form-control" type="text" name="name" id="name" placeholder="Name" autocomplete="name" required>
     <label for="name">Name</label>
   </div>
 
-  <div class="form-floating">
+  <div class="form-floating mb-3">
     <input class="form-control" type="email" name="email" id="email" placeholder="E-Mail" autocomplete="email" required>
+    <div class="invalid-feedback">E-Mail-Adresse ungültig.</div>
     <label for="email">E-Mail</label>
   </div>
 
-  <div class="form-floating">
+  <div class="d-none" aria-hidden="true">
+    <label for="website">Website</label>
+    <input
+      type="text"
+      name="website"
+      id="website"
+      tabindex="-1"
+      autocomplete="off">
+  </div>
+
+  <div class="form-floating mb-3">
     <input class="form-control" type="tel" name="phone" id="phone" placeholder="Telefon" autocomplete="tel">
+    <div class="invalid-feedback">Telefonnummer ungültig.</div>
     <label for="phone">Telefon</label>
   </div>
 
-  <div class="form-floating">
+  <div class="form-floating mb-3">
     <textarea class="form-control" name="message" id="message" placeholder="Ihre Nachricht" required></textarea>
+    <div class="invalid-feedback">Nachricht leer.</div>
     <label for="message">Ihre Nachricht</label>
   </div>
 

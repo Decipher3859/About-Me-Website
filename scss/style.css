@@ -12277,7 +12277,7 @@ header {
   text-align: center;
 }
 
-.landing-intro {
+.intro {
   display: grid;
   grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.45fr);
   align-items: stretch;
@@ -12286,14 +12286,14 @@ header {
   margin: clamp(1.5rem, 4vw, 3rem) auto 0;
 }
 
-.landing-motivation,
-.landing-profile {
+.motivation,
+.profile-layout {
   min-width: 0;
   border-radius: 8px;
   box-shadow: 0 24px 70px rgba(8, 10, 18, 0.35);
 }
 
-.landing-motivation {
+.motivation {
   display: grid;
   align-content: start;
   gap: clamp(0.6rem, 1vw, 0.85rem);
@@ -12302,11 +12302,11 @@ header {
   border: 1px solid var(--color-line);
 }
 
-.landing-motivation > .eyebrow {
+.motivation > .eyebrow {
   margin-bottom: -0.55rem;
 }
 
-.landing-motivation h1 {
+.motivation h1 {
   margin: 0;
   color: var(--color-secondary-contrast);
   font-size: clamp(1.9rem, 3.5vw, 3rem);
@@ -12315,7 +12315,7 @@ header {
   white-space: nowrap;
 }
 
-.landing-motivation > p {
+.motivation > p {
   max-width: 680px;
   margin: 0;
   font-size: clamp(1.02rem, 2vw, 1.16rem);
@@ -12346,7 +12346,7 @@ header {
   line-height: 1.35;
 }
 
-.landing-profile {
+.profile-layout {
   position: relative;
   display: block;
   overflow: visible;
@@ -12354,10 +12354,10 @@ header {
   border: 1px solid var(--color-line);
 }
 
-.landing-profile-image {
+.profile-image {
   position: absolute;
-  top: clamp(-1.6rem, -2.4vw, -0.9rem);
-  right: clamp(-5.5rem, -8vw, -3rem);
+  top: clamp(-1.9rem, -2.4vw, -0.9rem);
+  right: clamp(-7.5rem, -8vw, -3rem);
   width: 100%;
   max-width: clamp(120px, 13vw, 176px);
   aspect-ratio: 4/5;
@@ -12369,7 +12369,7 @@ header {
   box-shadow: 0 24px 70px rgba(8, 10, 18, 0.35);
 }
 
-.landing-profile-card {
+.profile-card {
   display: grid;
   align-content: center;
   gap: 1.2rem;
@@ -12378,15 +12378,19 @@ header {
   padding-right: clamp(1.25rem, 3vw, 1.6rem);
 }
 
-.landing-profile .contact-list li {
+.profile-card a {
+  color: #3e68d7;
+}
+
+.profile-layout .contact-list li {
   border-top-color: color-mix(in srgb, var(--color-secondary-contrast) 16%, transparent);
 }
 
-.landing-profile .contact-list span {
+.profile-layout .contact-list span {
   color: color-mix(in srgb, var(--color-secondary-contrast) 62%, transparent);
 }
 
-.landing-profile .contact-list strong {
+.profile-layout .contact-list strong {
   color: var(--color-secondary-contrast);
 }
 
@@ -12462,10 +12466,19 @@ header {
   align-items: center;
 }
 
+.icon-circle {
+  width: 1.5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: inline-grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.15);
+}
+
 .tree-icon {
+  display: block;
   height: 1.25rem;
-  width: auto;
-  margin-right: 0.45rem;
+  width: 1.25;
 }
 
 .tree-content {
@@ -12478,6 +12491,73 @@ h2.tree-content {
   color: var(--color-primary-contrast);
   font-size: 1.25rem;
   font-weight: 800;
+}
+
+.tree-content.project-group {
+  appearance: none;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-highlight);
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.node-project-groups {
+  display: block;
+  flex: 0 0 100%;
+  margin-top: 0.12rem;
+  margin-left: 0;
+}
+
+.node-repo-groups {
+  display: block;
+  flex: 0 0 100%;
+  margin-top: 0.35rem;
+  margin-left: 1.85rem;
+}
+
+.node-project-list .node-repo-groups {
+  margin-left: 0;
+}
+
+.node-repo-link {
+  width: max-content;
+  color: var(--color-highlight);
+  gap: 0.35rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.node-project-list .node-repo-link {
+  font-size: 0.9rem;
+}
+
+.node-repo-link:hover,
+.node-repo-link:focus-visible {
+  color: var(--color-primary-contrast);
+}
+
+.node-repo-link img {
+  width: 1rem;
+  aspect-ratio: 1;
+}
+
+.node-project-group {
+  display: block;
+  margin: 0.05rem 0 0;
+}
+
+.node-project-list {
+  margin-top: 0.2rem;
+}
+
+.node-project-list > li > .tree-content,
+.node-project-list > li > details > summary > .tree-content {
+  color: var(--color-secondary-contrast);
+  font-size: 0.9rem;
 }
 
 .tree-comment {
@@ -12494,6 +12574,7 @@ h2.tree-content {
 
 summary {
   display: inline-flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 0.35rem;
   list-style: none;
@@ -12504,7 +12585,7 @@ summary::-webkit-details-marker {
   display: none;
 }
 
-summary .tree-content::after {
+summary > .tree-content::after {
   content: ">";
   display: inline-block;
   margin-left: 0.5rem;
@@ -12513,7 +12594,20 @@ summary .tree-content::after {
   transition: transform 0.15s ease;
 }
 
-details[open] > summary .tree-content::after {
+details[open] > summary > .tree-content::after {
+  transform: rotate(90deg);
+}
+
+.node-project-toggle::after {
+  content: ">";
+  display: inline-block;
+  margin-left: 0.5rem;
+  color: var(--color-highlight);
+  font-size: 0.9em;
+  transition: transform 0.15s ease;
+}
+
+.node-project-toggle[aria-expanded=true]::after {
   transform: rotate(90deg);
 }
 
@@ -12607,23 +12701,18 @@ details[open] > summary .tree-content::after {
   gap: clamp(1rem, 3vw, 1.5rem);
 }
 
-.contact-panel {
+.contact-profile {
   display: grid;
   align-content: space-between;
-  gap: 2rem;
-  padding: clamp(1.25rem, 3vw, 2rem);
-  background: linear-gradient(145deg, rgba(35, 35, 35, 0.94), color-mix(in srgb, var(--color-primary-shade) 92%, transparent)), var(--color-primary-shade);
   border: 1px solid rgba(255, 199, 119, 0.26);
-  border-radius: 8px;
-  box-shadow: 0 24px 70px rgba(8, 10, 18, 0.35);
 }
 
-.contact-panel h2 {
+.contact-profile h2 {
   margin: 0.45rem 0 0.85rem;
   font-size: clamp(1.45rem, 3vw, 2.1rem);
 }
 
-.contact-panel p {
+.contact-profile p {
   max-width: none;
   margin: 0;
 }
@@ -12755,18 +12844,18 @@ details[open] > summary .tree-content::after {
   }
 }
 @media (max-width: 900px) {
-  .landing-intro,
+  .intro,
   .contact-layout {
     grid-template-columns: 1fr;
   }
-  .landing-motivation h1 {
+  .motivation h1 {
     white-space: normal;
   }
-  .landing-profile {
+  .profile-layout {
     display: grid;
     overflow: hidden;
   }
-  .landing-profile-image {
+  .profile-image {
     position: static;
     max-width: none;
     aspect-ratio: 4/3;
@@ -12776,7 +12865,7 @@ details[open] > summary .tree-content::after {
     border-radius: 0;
     box-shadow: none;
   }
-  .landing-profile-card {
+  .profile-card {
     padding-right: clamp(1.25rem, 3vw, 1.6rem);
     padding-left: clamp(1.25rem, 3vw, 1.6rem);
   }
@@ -12786,7 +12875,7 @@ details[open] > summary .tree-content::after {
     flex-direction: column;
     gap: 0.25rem;
   }
-  .landing-motivation h1 {
+  .motivation h1 {
     font-size: 2rem;
   }
 }

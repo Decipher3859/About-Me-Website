@@ -1,0 +1,15 @@
+# Composer
+/vendor/
+
+# Node 
+/node_modules/
+
+# Umgebungsvariablen
+/.env
+
+# Betriebssystem
+.DS_Store
+Thumbs.db
+
+# Logs
+.log
