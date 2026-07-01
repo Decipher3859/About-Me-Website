@@ -1,0 +1,34 @@
+{{> header }}
+
+<section class="contact-response" aria-labelledby="contact-response-title">
+  <h1 id="contact-response-title">{{ content.heading }}</h1>
+  <p>{{ content.message }}</p>
+
+  {{# content.has_errors }}
+    <h2>Fehler</h2>
+    <ul class="contact-response-list">
+      {{# content.errors }}
+        <li>
+          <strong>{{ label }}:</strong>
+          <span>{{ message }}</span>
+        </li>
+      {{/ content.errors }}
+    </ul>
+  {{/ content.has_errors }}
+
+  {{# content.has_summary }}
+    <h2>Zusammenfassung</h2>
+    <ul class="contact-response-list">
+      {{# content.summary }}
+        <li>
+          <strong>{{ label }}:</strong>
+          <span>{{ value }}</span>
+        </li>
+      {{/ content.summary }}
+    </ul>
+  {{/ content.has_summary }}
+
+  <a class="btn btn-primary" href="/contact">Zurück zum Kontaktformular</a>
+</section>
+
+{{> footer }}

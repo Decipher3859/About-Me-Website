@@ -1,10 +1,10 @@
 <li data-search="{{ content }} {{ comment }} {{ repo }}">
   {{# has-children }}
-  <details>
+  <details {{# is-open }}open{{/ is-open }}>
     <summary>
       {{# has-icon }}
       <span class="icon-circle">
-        <img class="tree-icon" src="../../assets/icons/{{ icon }}" alt="devicon">
+        <img class="devicon" src="../../assets/icons/{{ icon }}" alt="devicon">
       </span>
       {{/ has-icon }}
 
@@ -21,44 +21,39 @@
       <span class="tree-comment">{{{ comment }}}</span>
       {{/ has-comment }}
 
-      {{# has-project-groups }}
-      <span class="node-project-groups">
-        {{# project-groups }}
-        <span class="node-project-group">
-          <button class="tree-content {{ class }} node-project-toggle" type="button" aria-expanded="false">{{ content }}</button>
-          <ul class="node-project-list" hidden>
-            {{# children }}
-            {{> tree-node }}
-            {{/ children }}
-          </ul>
-        </span>
-        {{/ project-groups }}
-      </span>
-      {{/ has-project-groups }}
-
       {{# has-repo }}
       <span class="node-repo-groups">
         <a class="tree-content node-repo-link" href="https://github.com/Decipher3859/{{ repo }}" target="_blank" rel="noopener noreferrer">
-          <img src="../../assets/icons/github-original.svg" alt="github-icon">Zum Quellcode
+          <img class="devicon" src="../../assets/icons/github-original.svg" alt="github-icon">Zum Quellcode
         </a>
       </span>
       {{/ has-repo }}
     </summary>
 
-    {{# has-tree-children }}
+    {{# has-list-children }}
     <ul>
       {{# children }}
       {{> tree-node }}
       {{/ children }}
+      {{# project-groups }}
+      <li class="node-project-group">
+        <button class="tree-content {{ class }} node-project-toggle" type="button" aria-expanded="true">{{ content }}</button>
+        <ul class="node-project-list">
+          {{# children }}
+          {{> tree-node }}
+          {{/ children }}
+        </ul>
+      </li>
+      {{/ project-groups }}
     </ul>
-    {{/ has-tree-children }}
+    {{/ has-list-children }}
   </details>
   {{/ has-children }}
 
   {{^ has-children }}
     {{# has-icon }}
     <span class="icon-circle">
-      <img class="tree-icon" src="../../assets/icons/{{ icon }}" alt="devicon">
+      <img class="devicon" src="../../assets/icons/{{ icon }}" alt="devicon">
     </span>
     {{/ has-icon }}
 
@@ -75,25 +70,10 @@
       <span class="tree-comment">{{{ comment }}}</span>
     {{/ has-comment }}
 
-    {{# has-project-groups }}
-    <span class="node-project-groups">
-      {{# project-groups }}
-      <span class="node-project-group">
-        <button class="tree-content {{ class }} node-project-toggle" type="button" aria-expanded="false">{{ content }}</button>
-        <ul class="node-project-list" hidden>
-          {{# children }}
-          {{> tree-node }}
-          {{/ children }}
-        </ul>
-      </span>
-      {{/ project-groups }}
-    </span>
-    {{/ has-project-groups }}
-
     {{# has-repo }}
     <span class="node-repo-groups">
       <a class="tree-content node-repo-link" href="https://github.com/Decipher3859/{{ repo }}" target="_blank" rel="noopener noreferrer">
-        <img src="../../assets/icons/github-original.svg" alt="github-icon">Zum Quellcode
+        <img class="devicon" src="../../assets/icons/github-original.svg" alt="github-icon">Zum Quellcode
       </a>
     </span>
     {{/ has-repo }}

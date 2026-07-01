@@ -7,7 +7,7 @@ class TreeBuilder
 
   public function __construct()
   {
-    $jsonPath = __DIR__ . '/../data/skills.json';
+    $jsonPath = __DIR__ . '/../data/skilltree.json';
     if (!is_readable($jsonPath)) {
       return;
     }
@@ -55,9 +55,11 @@ class TreeBuilder
       $node['has-content'] = !empty($node['content']);
       $node['has-comment'] = !empty($node['comment']);
       $node['has-repo'] = !empty($node['repo']);
+      $node['is-open'] = !empty($node['open']);
       $node['has-tree-children'] = !empty($node['children']);
       $node['has-project-groups'] = !empty($node['project-groups']);
-      $node['has-children'] = $node['has-tree-children'];
+      $node['has-list-children'] = $node['has-tree-children'] || $node['has-project-groups'];
+      $node['has-children'] = $node['has-list-children'];
 
       if ($node['has-tree-children']) {
         $node['children'] = $this->compileTreeView($node['children']);

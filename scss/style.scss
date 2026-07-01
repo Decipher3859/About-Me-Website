@@ -68,7 +68,7 @@ body {
   min-height: 100vh;
   margin: 0;
   background: radial-gradient(circle at top left, rgba(t.$blue, 0.18), transparent 34rem), linear-gradient(135deg, var(--color-primary-shade-light) 0%, var(--color-primary-color) 52%, var(--color-primary-shade) 100%);
-  color: var(--color-secondary-contrast);
+  color: var(--color-text-black);
   box-sizing: border-box;
   line-height: 1.7;
   transition: background 0.2s ease, color 0.2s ease;
@@ -93,7 +93,7 @@ h1 {
 
 p {
   max-width: 780px;
-  color: var(--color-muted);
+  color: var(--color-text-gray);
   font-size: 1.05rem;
 }
 
@@ -103,16 +103,16 @@ main>p {
 }
 
 a {
-  color: t.$blue;
+  color: var(--color-text-link);
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--color-primary-contrast);
+  color: var(--color-text-blue);
 }
 
 .btn-primary {
-  color: t.$frame-color;
+  color: var(--color-text-black);
   border-color: t.$blue;
   background: linear-gradient(135deg, t.$cyan 0%, t.$cyan 100%);
   box-shadow: 0 12px 28px rgba(t.$blue, 0.24)
@@ -129,11 +129,14 @@ footer {
 }
 
 header {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
   border-bottom: 2px solid t.$red;
 }
 
 .nav-link {
-  color: t.$frame-text-color;
+  color: var(--color-text-gray);
 }
 
 .navbar-brand {
@@ -149,7 +152,7 @@ header {
 
 .eyebrow {
   margin: 0;
-  color: var(--color-primary-contrast);
+  color: var(--color-text-blue);
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0;
@@ -164,7 +167,7 @@ header {
 .theme-toggle svg {
   width: 2rem;
   height: 2rem;
-  color: t.$frame-text-color;
+  color: var(--color-text-gray);
 }
 
 // --- CONSTRUCTION BANNER ---
@@ -177,7 +180,7 @@ header {
   width: 100vw;
   margin: calc(clamp(2rem, 5vw, 4rem) * -1) calc(50% - 50vw) 0;
   padding: 0.85rem max(clamp(1rem, 5vw, 4rem), calc((100w - 1120px) / 2 + 2rem));
-  color: #16202e;
+  color: var(--color-text-black);
   background-color: t.$yellow;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
   font-size: 0.98rem;
@@ -217,7 +220,7 @@ header {
 
 .motivation h1 {
   margin: 0;
-  color: var(--color-secondary-contrast);
+  color: var(--color-text-black);
   font-size: clamp(1.9rem, 3.5vw, 3rem);
   line-height: 1.08;
   overflow-wrap: anywhere;
@@ -249,7 +252,7 @@ header {
 }
 
 .landing-quote p:not(.eyebrow) {
-  color: var(--color-secondary-contrast);
+  color: var(--color-text-black);
   font-size: clamp(1.08rem, 2vw, 1.25rem);
   font-weight: 800;
   line-height: 1.35;
@@ -288,7 +291,7 @@ header {
 }
 
 .profile-card a {
-  color: t.$blue;
+  color: var(--color-text-link);
 }
 
 .profile-layout .contact-list li {
@@ -296,11 +299,11 @@ header {
 }
 
 .profile-layout .contact-list span {
-  color: color-mix(in srgb, var(--color-secondary-contrast) 62%, transparent);
+  color: var(--color-text-gray);
 }
 
 .profile-layout .contact-list strong {
-  color: var(--color-secondary-contrast);
+  color: var(--color-text-black);
 }
 
 .content {
@@ -317,52 +320,57 @@ header {
 
 // --- TREEVIEW ---
 
-.skills-tree {
+.skilltree {
   width: min(100%, 920px);
   margin: 0 auto;
   padding: clamp(1.25rem, 3vw, 2rem);
 }
 
-.skills-tree-title {
+.skilltree-title {
   margin: 0 0 1.5rem;
-  color: var(--color-secondary-contrast);
+  color: var(--color-text-black);
   font-size: clamp(1.8rem, 4vw, 2.6rem);
   font-weight: 800;
   text-align: center;
 }
 
-.skills-tree-list,
-.skills-tree-list ul {
+.skilltree-list,
+.skilltree-list ul,
+.project-list,
+.project-list ul {
   margin: 0;
   padding: 0;
   list-style: none;
+
 }
 
-.skills-tree-list {
+.skilltree-list,
+.project-list {
   display: grid;
   gap: 0.9rem;
 }
 
-.skills-tree-list>li {
+.skilltree-list>li,
+.project-list>li {
   padding: 1rem 1.1rem;
   background: color-mix(in srgb, var(--color-primary-shade-light) 76%, transparent);
   border: 1px solid var(--color-line);
   border-radius: 8px;
 }
 
-.skills-tree-list ul {
+.skilltree-list ul {
   margin-top: 0.7rem;
   padding-left: 1.25rem;
   border-left: 2px solid color-mix(in srgb, var(--color-primary-contrast) 35%, transparent);
 }
 
-.skills-tree-list li {
+.skilltree-list li {
   position: relative;
   margin: 0.35rem 0;
-  color: var(--color-muted);
+  color: var(--color-text-gray);
 }
 
-.skills-tree-list ul li::before {
+.skilltree-list ul li::before {
   content: "";
   position: absolute;
   left: -1.32rem;
@@ -388,20 +396,20 @@ header {
   background: rgba(255, 255, 255, 0.15);
 }
 
-.tree-icon {
+.devicon {
   display: block;
-  height: 1.25rem;
-  width: 1.25;
+  height: 1.45rem;
+  width: 1.45rem;
 }
 
 .tree-content {
-  color: var(--color-secondary-contrast);
+  color: var(--color-text-black);
   font-weight: 600;
 }
 
 h2.tree-content {
   margin: 0;
-  color: var(--color-primary-contrast);
+  color: var(--color-text-blue);
   font-size: 1.25rem;
   font-weight: 800;
 }
@@ -411,7 +419,7 @@ h2.tree-content {
   padding: 0;
   border: 0;
   background: transparent;
-  color: var(--color-highlight);
+  color: var(--color-text-highlight);
   font-size: 0.82rem;
   font-weight: 700;
   cursor: pointer;
@@ -437,7 +445,7 @@ h2.tree-content {
 
 .node-repo-link {
   width: max-content;
-  color: var(--color-highlight);
+  color: var(--color-text-link);
   gap: 0.35rem;
   font-size: 0.92rem;
   font-weight: 700;
@@ -450,7 +458,7 @@ h2.tree-content {
 
 .node-repo-link:hover,
 .node-repo-link:focus-visible {
-  color: var(--color-primary-contrast);
+  color: var(--color-text-blue);
 }
 
 .node-repo-link img {
@@ -469,20 +477,20 @@ h2.tree-content {
 
 .node-project-list>li>.tree-content,
 .node-project-list>li>details>summary>.tree-content {
-  color: var(--color-secondary-contrast);
+  color: var(--color-text-black);
   font-size: 0.9rem;
 }
 
 .tree-comment {
   margin-left: 0.6rem;
-  color: var(--color-highlight);
+  color: var(--color-text-highlight);
   font-size: 0.9rem;
 }
 
 .tree-comment::before {
   content: "//";
   margin-right: 0.45rem;
-  color: t.$green;
+  color: var(--color-text-gray);
 }
 
 summary {
@@ -502,7 +510,7 @@ summary>.tree-content::after {
   content: ">";
   display: inline-block;
   margin-left: 0.5rem;
-  color: var(--color-highlight);
+  color: var(--color-text-highlight);
   font-size: 0.9em;
   transition: transform 0.15s ease;
 }
@@ -515,7 +523,7 @@ details[open]>summary>.tree-content::after {
   content: ">";
   display: inline-block;
   margin-left: 0.5rem;
-  color: var(--color-highlight);
+  color: var(--color-text-highlight);
   font-size: 0.9em;
   transition: transform 0.15s ease;
 }
@@ -533,7 +541,7 @@ details[open]>summary>.tree-content::after {
 }
 
 .site-search label {
-  color: rgba(255, 255, 255, 0.72);
+  color: var(--color-text-gray);
   font-size: 0.86rem;
   white-space: nowrap;
 }
@@ -542,11 +550,11 @@ details[open]>summary>.tree-content::after {
   width: 13rem;
   border-color: var(--color-primary-contrast);
   background-color: rgba(255, 255, 255, 0.08);
-  color: var(--color-secondary-contrast);
+  color: var(--color-text-black);
 }
 
 .site-search .form-control::placeholder {
-  color: rgba(255, 255, 255, 0.52);
+  color: var(--color-text-gray);
 }
 
 .site-search .form-control:focus,
@@ -577,7 +585,7 @@ details[open]>summary>.tree-content::after {
 
 .contact-form-header h2 {
   margin: 0;
-  color: var(--color-secondary-contrast);
+  color: var(--color-text-black);
   font-size: clamp(1.45rem, 3vw, 2rem);
   line-height: 1.15;
 }
@@ -635,7 +643,7 @@ details[open]>summary>.tree-content::after {
   display: inline-flex;
   width: fit-content;
   padding: 0.25rem 0.55rem;
-  color: #182030;
+  color: var(--color-text-black);
   background-color: t.$yellow;
   border-radius: 8px;
   font-size: 0.78rem;
@@ -659,7 +667,7 @@ details[open]>summary>.tree-content::after {
 }
 
 .contact-list span {
-  color: rgba(255, 255, 255, 0.58);
+  color: var(--color-text-gray);
   font-size: 0.82rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -667,14 +675,14 @@ details[open]>summary>.tree-content::after {
 
 .contact-list strong,
 .contact-list a {
-  color: #f2f5ff;
+  color: var(--color-text-black);
   font-size: 1rem;
   font-weight: 700;
   overflow-wrap: anywhere;
 }
 
 .contact-list a:hover {
-  color: t.$yellow;
+  color: var(--color-text-link);
 }
 
 .contact-form .form-control {
@@ -682,7 +690,7 @@ details[open]>summary>.tree-content::after {
   min-height: 3.45rem;
   border-color: color-mix(in srgb, var(--color-secondary-contrast) 16%, transparent);
   background-color: color-mix(in srgb, var(--color-primary-color) 46%, transparent);
-  color: var(--color-secondary-contrast);
+  color: var(--color-text-black);
   border-radius: 8px;
 }
 
@@ -696,12 +704,12 @@ details[open]>summary>.tree-content::after {
 }
 
 .contact-form .form-floating>label {
-  color: color-mix(in srgb, var(--color-secondary-contrast) 68%, transparent);
+  color: var(--color-text-gray);
 }
 
 .contact-form .form-floating>.form-control:focus~label,
 .contact-form .form-floating>.form-control:not(:placeholder-shown)~label {
-  color: var(--color-primary-contrast);
+  color: var(--color-text-blue);
 }
 
 .contact-form .form-floating>.form-control:focus,
@@ -715,6 +723,103 @@ details[open]>summary>.tree-content::after {
   margin-top: 0.25rem;
   padding-inline: 1.35rem;
   font-weight: 800;
+}
+
+.contact-response {
+  display: grid;
+  gap: 1rem;
+  width: min(100%, 760px);
+  margin: clamp(1.5rem, 5vw, 4rem) auto 0;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--color-primary-shade-light) 92%, transparent), color-mix(in srgb, var(--color-primary-shade) 90%, transparent));
+  border: 1px solid var(--color-line);
+  border-radius: 8px;
+  box-shadow: t.$shadow;
+}
+
+.contact-response h1 {
+  margin: 0;
+  color: var(--color-text-black);
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+  line-height: 1.12;
+}
+
+.contact-response h2 {
+  margin: 0.5rem 0 0;
+  color: var(--color-text-black);
+  font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+}
+
+.contact-response p {
+  max-width: none;
+  margin: 0;
+}
+
+.contact-response-list {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-response-list li {
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--color-line);
+}
+
+.contact-response-list strong {
+  color: var(--color-text-blue);
+}
+
+.contact-response-list span {
+  color: var(--color-text-black);
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.contact-response .btn {
+  justify-self: start;
+  margin-top: 0.5rem;
+}
+
+// --- PROJECTS ---
+.projects h1,
+h2,
+h3 {
+  margin: 0.1rem;
+}
+
+// --- TAGS ---
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: .8rem;
+
+  padding: .35rem .35rem;
+  border-radius: 999px;
+
+  background: var(--surface);
+  border: 1px solid var(--line);
+
+  color: var(--color-text-black);
+  font-size: .9rem;
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+.tag img {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+.tag:hover {
+  background: var(--surface-light);
+  border-color: var(--accent);
 }
 
 // --- FOOTER ---
@@ -743,7 +848,7 @@ details[open]>summary>.tree-content::after {
 .privacy-banner p {
   max-width: none;
   margin: 0;
-  color: t.$frame-text-color;
+  color: var(--color-text-gray);
   font-size: 0.98rem;
 }
 

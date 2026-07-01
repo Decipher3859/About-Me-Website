@@ -1,5 +1,5 @@
 {
-  "name": "about-me-website",
+  "name": "web-portfolio",
   "version": "1.0.0",
   "description": "Auf dieser Website möchte ich mich und meinen Werdegang als Anwendungsentwickler vorstellen.",
   "main": "index.js",
@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/Decipher3859/About-Me-Website#readme",
   "dependencies": {
-    "bootstrap": "^5.3.8",
     "php": "^1.1.0",
     "serve": "^14.2.6",
     "theme-toggles": "^4.10.1"

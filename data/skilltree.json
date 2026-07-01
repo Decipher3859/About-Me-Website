@@ -1,0 +1,449 @@
+{
+  "id": "skilltree",
+  "children": [
+    {
+      "is-heading": true,
+      "content": "Programmierung",
+      "children": [
+        {
+          "icon": "csharp-original.svg",
+          "content": "C#",
+          "comment": "Langjährige Begleitung; schnelle Orientierung in bestehenden Projekten und Codebasen.",
+          "children": [
+            {
+              "icon": "dot-net-original.svg",
+              "content": ".NET",
+              "children": [
+                {
+                  "content": "WebView2"
+                },
+                {
+                  "content": "WPF"
+                }
+              ]
+            },
+            {
+              "content": "Projekte",
+              "children": [
+                {
+                  "content": "Modul zur Verwaltung von Individuen im Artenschutz",
+                  "comment": "Im Rahmen eines Betriebspraktikums"
+                }
+              ],
+              "class": "project-group"
+            }
+          ]
+        },
+        {
+          "icon": "cplusplus-original.svg",
+          "content": "C++",
+          "comment": "Ältere Sprachkonzepte waren zunächst ungewohnt, wurden im Projektverlauf aber klarer.",
+          "children": [
+            {
+              "icon": "arduino-original.svg",
+              "content": "Arduino",
+              "children": [
+                {
+                  "content": "Arduino CLI",
+                  "icon": "arduino-original.svg"
+                }
+              ]
+            },
+            {
+              "content": "Raylib",
+              "icon": "raylib-original.svg"
+            },
+            {
+              "content": "Projekte",
+              "children": [
+                {
+                  "content": "Firmware einer digitalen Wort-Uhr",
+                  "comment": "Mein Code basiert auf der Arbeit von Kater--S",
+                  "repo": "WordClock-for-btz"
+                },
+                {
+                  "content": "Conway's Game of Life",
+                  "comment": "Tutorial zum Erlernen von RayLib",
+                  "repo": "learnings"
+                }
+              ],
+              "class": "project-group"
+            }
+          ]
+        },
+        {
+          "icon": "dart-original.svg",
+          "content": "Dart",
+          "comment": "Sehr schnelle GUI-Fortschritte durch das Widget-Konzept",
+          "children": [
+            {
+              "icon": "flutter-original.svg",
+              "content": "Flutter"
+            },
+            {
+              "content": "Material Design",
+              "icon": "materialdesign-original.svg"
+            },
+            {
+              "content": "Projekte",
+              "children": [
+                {
+                  "content": "Habit Tracker \"Rise Up\"",
+                  "comment": "Funktionaler Prototyp",
+                  "icon": "android-original.svg"
+                }
+              ],
+              "class": "project-group"
+            }
+          ]
+        },
+        {
+          "icon": "godot-original.svg",
+          "content": "GDScript",
+          "comment": "Ein erster Versuch im Game Development",
+          "children": [
+            {
+              "content": "Projekte",
+              "children": [
+                {
+                  "content": "Character Creator",
+                  "comment": "Prototyp eines Charakter Editors, um die Godot Game Engine kennen zu lernen",
+                  "repo": "Character_Creator"
+                }
+              ],
+              "class": "project-group"
+            }
+          ]
+        },
+        {
+          "icon": "python-original.svg",
+          "content": "Python",
+          "comment": "Vor allem für Prototypen und Experimente genutzt.",
+          "children": [
+            {
+              "content": "Projekte",
+              "children": [
+                {
+                  "content": "FactR knowledge",
+                  "comment": "Tool für Recherche und Wissensmanagement",
+                  "repo": "FactR_knowledge"
+                }
+              ],
+              "class": "project-group"
+            }
+          ]
+        },
+        {
+          "icon": "rust-original.svg",
+          "content": "Rust",
+          "comment": "Bisher vor allem Tutorial- und Lernprojekte.",
+          "children": [
+            {
+              "content": "Cargo"
+            },
+            {
+              "content": "color-eyre"
+            },
+            {
+              "content": "Crossterm"
+            },
+            {
+              "content": "ratatui"
+            },
+            {
+              "content": "Serde"
+            },
+            {
+              "content": "Terminal UI"
+            },
+            {
+              "content": "Projekte",
+              "children": [
+                {
+                  "content": "Verschiedene Tutorials zum Erlenen von CLI Entwicklung",
+                  "repo": "learnings"
+                }
+              ],
+              "class": "project-group"
+            }
+          ]
+        },
+        {
+          "content": "Webentwicklung",
+          "children": [
+            {
+              "icon": "bootstrap-original.svg",
+              "content": "Bootstrap"
+            },
+            {
+              "icon": "css3-original.svg",
+              "content": "CSS"
+            },
+            {
+              "icon": "html5-original.svg",
+              "content": "HTML"
+            },
+            {
+              "icon": "javascript-original.svg",
+              "content": "JavaScript",
+              "children": [
+                {
+                  "icon": "json-original.svg",
+                  "content": "JSON"
+                }
+              ]
+            },
+            {
+              "content": "Mustache Template",
+              "icon": "mustache-original.svg"
+            },
+            {
+              "icon": "nodejs-original.svg",
+              "content": "Node.js",
+              "children": [
+                {
+                  "icon": "npm-original-wordmark.svg",
+                  "content": "npm"
+                }
+              ]
+            },
+            {
+              "icon": "php-original.svg",
+              "content": "PHP",
+              "children": [
+                {
+                  "icon": "composer-original.svg",
+                  "content": "Composer"
+                }
+              ]
+            },
+            {
+              "icon": "sass-original.svg",
+              "content": "Sass",
+              "children": [
+                {
+                  "icon": "sass-original.svg",
+                  "content": "SCSS",
+                  "comment": "Mit dieser Website neu kennengelernt."
+                }
+              ]
+            },
+            {
+              "content": "Projekte",
+              "children": [
+                {
+                  "icon": "firefox-original.svg",
+                  "content": "Read Cheat"
+                },
+                {
+                  "icon": "php-original.svg",
+                  "content": "Web-Portfolio"
+                },
+                {
+                  "icon": "wordpress-original.svg",
+                  "content": "WP Questionaire Builder"
+                }
+              ],
+              "class": "project-group"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "is-heading": true,
+      "content": "Datenbanken",
+      "children": [
+        {
+          "content": "Datenmodellierung"
+        },
+        {
+          "content": "Relationale Datenbanken"
+        },
+        {
+          "icon": "mariadb-original.svg",
+          "content": "MariaDB"
+        },
+        {
+          "icon": "mysql-original.svg",
+          "content": "MySQL"
+        },
+        {
+          "icon": "sqlite-original.svg",
+          "content": "SQL",
+          "comment": "Abfragen und Joins sicher anwendbar."
+        }
+      ]
+    },
+    {
+      "is-heading": true,
+      "content": "Systemadministration",
+      "children": [
+        {
+          "icon": "linuxmint-original.svg",
+          "content": "Linux",
+          "children": [
+            {
+              "icon": "bash-original.svg",
+              "content": "Bash",
+              "comment": "Syntax grundsätzlich verständlich; bisher vor allem vorhandene Skripte und Beispiele angepasst."
+            },
+            {
+              "content": "GNU Stow",
+              "icon": "gnu-original.svg"
+            },
+            {
+              "icon": "ssh-original.svg",
+              "content": "SSH"
+            }
+          ]
+        },
+        {
+          "content": "Netzwerk und Webserver",
+          "comment": "Mehr verwenden, als verstehen",
+          "children": [
+            {
+              "content": "DNS"
+            },
+            {
+              "content": "HTTPS"
+            },
+            {
+              "content": "Reverse Proxy"
+            },
+            {
+              "icon": "apache-original.svg",
+              "content": "Apache"
+            },
+            {
+              "icon": "filezilla-original.svg",
+              "content": "FileZilla"
+            },
+            {
+              "icon": "nginx-original.svg",
+              "content": "Nginx"
+            }
+          ]
+        },
+        {
+          "content": "Selfhosting",
+          "children": [
+            {
+              "icon": "docker-original.svg",
+              "content": "Docker",
+              "children": [
+                {
+                  "content": "Docker Compose",
+                  "icon": "docker-original.svg"
+                }
+              ]
+            },
+            {
+              "content": "Synology DSM",
+              "icon": "synology-original.svg"
+            },
+            {
+              "content": "Projekte",
+              "children": [
+                {
+                  "content": "Immich",
+                  "icon": "immich-original.svg"
+                },
+                {
+                  "content": "Netbox",
+                  "icon": "netbox-original.svg"
+                },
+                {
+                  "content": "Paperless-ngx",
+                  "icon": "paperlessngx-original.svg"
+                },
+                {
+                  "content": "Pi-hole",
+                  "icon": "pihole-original.svg"
+                },
+                {
+                  "content": "Portainer",
+                  "icon": "portainer-original.svg"
+                },
+                {
+                  "content": "Terraria Game-Server"
+                },
+                {
+                  "icon": "wordpress-original.svg",
+                  "content": "WordPress"
+                }
+              ],
+              "class": "project-group"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "is-heading": true,
+      "content": "Konzepte",
+      "children": [
+        {
+          "content": "Objektorientierte Programmierung"
+        },
+        {
+          "content": "Scrum",
+          "comment": "Zertifizierter Scrum Master; Schulung durch Haufe Akademie; Zertifiziert durch scrum.org"
+        },
+        {
+          "content": "Versionierung",
+          "children": [
+            {
+              "icon": "git-original.svg",
+              "content": "Git"
+            },
+            {
+              "icon": "github-original.svg",
+              "content": "GitHub"
+            }
+          ]
+        },
+        {
+          "content": "Wissensmanagement",
+          "children": [
+            {
+              "icon": "obsidian-original.svg",
+              "content": "Obsidian"
+            },
+            {
+              "icon": "markdown-original.svg",
+              "content": "Markdown"
+            }
+          ]
+        },
+        {
+          "content": "CLI-first",
+          "children": [
+            {
+              "icon": "neovim-original.svg",
+              "content": "Neovim",
+              "children": [
+                {
+                  "content": "LazyVim",
+                  "children": [
+                    {
+                      "content": "Language Server Protocol"
+                    },
+                    {
+                      "content": "Mason"
+                    }
+                  ],
+                  "icon": "lazyvim-original.svg"
+                }
+              ]
+            },
+            {
+              "icon": "tmux-original.svg",
+              "content": "tmux"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

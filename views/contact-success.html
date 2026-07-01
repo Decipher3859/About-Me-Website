@@ -1,0 +1,25 @@
+{{> header }}
+
+<section class="contact-response" aria-labelledby="contact-response-title">
+  <h1 id="contact-response-title">Vielen Dank für Ihre Nachricht.</h1>
+  <p>Ich melde mich schnellstmöglich bie Ihnen.</p>
+
+  <h2>Zusammenfassung</h2>
+  {{# content.has_summary }}
+    <ul class="contact-response-list">
+      {{# content.summary }}
+        <li>
+          <strong>{{ label }}:</strong>
+          <span>{{ value }}</span>
+        </li>
+      {{/ content.summary }}
+    </ul>
+  {{/ content.has_summary }}
+  {{^ content.has_summary }}
+    <p>Ihre Nachricht wurde entgegengenommen.</p>
+  {{/ content.has_summary }}
+
+  <a class="btn btn-primary" href="/contact">Zurück zum Kontaktformular</a>
+</section>
+
+{{> footer }}

@@ -1,7 +1,6 @@
 <?php
 
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
 
 class MailSender
 {
@@ -42,16 +41,8 @@ class MailSender
 
       $mail->send();
       return true;
-    } catch (Exception $e) {
-      echo '<pre>';
-      echo 'Exception: ' . $e->getMessage();
-
-      if (isset($mail)) {
-        echo "\nMailer Error: " . $mail->ErrorInfo;
-      }
-
-      echo '</pre>';
-      die();
+    } catch (\Throwable $e) {
+      return false;
     }
   }
 
@@ -74,7 +65,7 @@ class MailSender
       $value = $_ENV[$key] ?? $_SERVER[$key] ?? getenv($key);
 
       if ($value === false || trim((string) $value) === '') {
-        throw new Exception('Missing mail configuration: ' . $key);
+        throw new \RuntimeException('Missing mail configuration: ' . $key);
       }
 
       $config[$key] = trim((string) $value);

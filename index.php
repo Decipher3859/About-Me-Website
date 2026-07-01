@@ -14,7 +14,7 @@ $page = $templates->getPageURL();
 $data = $templates->data($page);
 
 // --- TREE BUILDER ---
-if ($page === '/skills') {
+if ($page === '/skilltree') {
   $treeBuilder = new TreeBuilder();
   $data['tree'] = $treeBuilder->getTreeView();
 }
