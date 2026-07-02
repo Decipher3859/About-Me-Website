@@ -20,6 +20,23 @@ function updateThemeToggle(theme) {
   const isDark = theme === 'dark';
   themeToggle.classList.toggle('theme-toggle--toggled', isDark);
   themeToggle.setAttribute('aria-label', isDark ? 'Change to light mode' : 'Change to dark mode');
+  updateProfileImage(theme);
+}
+
+function updateProfileImage(theme) {
+  const profileImage = document.querySelector('.profile-image');
+
+  if (!profileImage) {
+    return;
+  }
+
+  const imageSource = theme === 'dark'
+    ? profileImage.dataset.profileDark
+    : profileImage.dataset.profileLight;
+
+  if (imageSource && profileImage.getAttribute('src') !== imageSource) {
+    profileImage.setAttribute('src', imageSource);
+  }
 }
 
 //--- PRIVACY BANNER ---

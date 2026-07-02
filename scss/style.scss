@@ -112,13 +112,15 @@ a:hover {
 }
 
 .btn-primary {
-  color: var(--color-text-black);
+  color: t.$black;
   border-color: t.$blue;
   background: linear-gradient(135deg, t.$cyan 0%, t.$cyan 100%);
   box-shadow: 0 12px 28px rgba(t.$blue, 0.24)
 }
 
-.btn-primary::hover {
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  color: t.$black;
   border-color: t.$yellow;
   background: linear-gradient(135deg, #4b6ce3 0%, #7490ff 100%);
 }
@@ -135,12 +137,20 @@ header {
   border-bottom: 2px solid t.$red;
 }
 
-.nav-link {
+header .navbar {
+  padding: 0.75rem clamp(1rem, 4vw, 2rem);
+}
+
+header .nav-link {
   color: var(--color-text-gray);
 }
 
 .navbar-brand {
-  margin-left: 15px;
+  margin: 0;
+  color: var(--color-text-black);
+  font-weight: 800;
+  line-height: 1.2;
+  white-space: normal;
 }
 
 .navbar-search {
@@ -160,7 +170,11 @@ header {
 }
 
 .theme-toggle {
-  margin-right: 2rem;
+  display: inline-grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin: 0 0 0 1rem;
   font-size: 2em;
 }
 
@@ -179,8 +193,8 @@ header {
   gap: 0.75rem;
   width: 100vw;
   margin: calc(clamp(2rem, 5vw, 4rem) * -1) calc(50% - 50vw) 0;
-  padding: 0.85rem max(clamp(1rem, 5vw, 4rem), calc((100w - 1120px) / 2 + 2rem));
-  color: var(--color-text-black);
+  padding: 0.85rem max(clamp(1rem, 5vw, 4rem), calc((100vw - 1120px) / 2 + 2rem));
+  color: t.$black;
   background-color: t.$yellow;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
   font-size: 0.98rem;
@@ -643,7 +657,7 @@ details[open]>summary>.tree-content::after {
   display: inline-flex;
   width: fit-content;
   padding: 0.25rem 0.55rem;
-  color: var(--color-text-black);
+  color: t.$black;
   background-color: t.$yellow;
   border-radius: 8px;
   font-size: 0.78rem;
@@ -723,6 +737,66 @@ details[open]>summary>.tree-content::after {
   margin-top: 0.25rem;
   padding-inline: 1.35rem;
   font-weight: 800;
+}
+
+@media (min-width: 992px) and (min-height: 720px) {
+  main:has(.contact-page) {
+    justify-content: center;
+    padding-top: clamp(1rem, 2vh, 1.5rem);
+    padding-bottom: clamp(1rem, 2vh, 1.5rem);
+  }
+
+  .contact-page {
+    display: grid;
+    align-content: center;
+  }
+
+  .contact-intro {
+    margin-bottom: clamp(0.85rem, 2vh, 1.35rem);
+  }
+
+  .contact-intro h1 {
+    margin-bottom: 0;
+    font-size: clamp(1.9rem, 4vh, 2.5rem);
+    line-height: 1.08;
+  }
+
+  .contact-layout {
+    gap: clamp(0.9rem, 2vw, 1.25rem);
+  }
+
+  .contact-form,
+  .contact-profile .profile-card {
+    padding: clamp(1rem, 2vh, 1.35rem);
+  }
+
+  .contact-form {
+    gap: 0.65rem;
+  }
+
+  .contact-form-header {
+    margin-bottom: 0;
+  }
+
+  .contact-form .mb-3 {
+    margin-bottom: 0 !important;
+  }
+
+  .contact-form .form-control {
+    min-height: 3.2rem;
+  }
+
+  .contact-form textarea.form-control {
+    min-height: clamp(7.5rem, 18vh, 9rem);
+  }
+
+  .contact-list {
+    gap: 0.55rem;
+  }
+
+  .contact-list li {
+    padding-top: 0.6rem;
+  }
 }
 
 .contact-response {
@@ -833,7 +907,7 @@ h3 {
   display: flex;
   align-items: center;
   gap: 1rem;
-  width: min(calc(100v - 2rem), 620px);
+  width: min(calc(100vw - 2rem), 620px);
   padding: 1rem;
   background-color: color-mix(in srgb, t.$frame-shade 96%, transparent);
   border: 1px solid color-mix(in srgb, t.$frame-contrast 32%, transparent);
@@ -872,6 +946,51 @@ h3 {
   }
 }
 
+@media (max-width: 991.98px) {
+  header .navbar {
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .navbar-brand {
+    max-width: calc(100% - 4.5rem);
+    font-size: clamp(1rem, 5vw, 1.2rem);
+  }
+
+  .navbar-toggler {
+    margin-left: auto;
+  }
+
+  .navbar-collapse {
+    flex-basis: 100%;
+    margin-top: 0.75rem;
+    padding: 0.75rem;
+    background-color: color-mix(in srgb, t.$frame-shade 94%, transparent);
+    border: 1px solid color-mix(in srgb, t.$frame-contrast 25%, transparent);
+    border-radius: 8px;
+    box-shadow: t.$shadow;
+  }
+
+  header .navbar-nav {
+    gap: 0.25rem;
+  }
+
+  header .nav-link {
+    padding: 0.65rem 0.75rem;
+    border-radius: 6px;
+    line-height: 1.25;
+  }
+
+  header .nav-link:hover,
+  header .nav-link:focus-visible {
+    background-color: color-mix(in srgb, var(--color-primary-shade-light) 72%, transparent);
+  }
+
+  .theme-toggle {
+    margin: 0.75rem 0 0;
+  }
+}
+
 @media (max-width: 900px) {
 
   .intro,
@@ -884,24 +1003,23 @@ h3 {
   }
 
   .profile-layout {
-    display: grid;
+    display: block;
     overflow: hidden;
   }
 
   .profile-image {
-    position: static;
-    max-width: none;
-    aspect-ratio: 4 / 3;
-    min-height: 0;
-    height: auto;
-    border: 0;
-    border-radius: 0;
-    box-shadow: none;
+    top: clamp(1.25rem, 3vw, 1.6rem);
+    right: clamp(1.25rem, 3vw, 1.6rem);
+    z-index: 1;
   }
 
   .profile-card {
     padding-right: clamp(1.25rem, 3vw, 1.6rem);
     padding-left: clamp(1.25rem, 3vw, 1.6rem);
+  }
+
+  .profile-layout .contact-list li {
+    padding-right: calc(clamp(120px, 13vw, 176px) + clamp(0.9rem, 3vw, 1.25rem));
   }
 }
 

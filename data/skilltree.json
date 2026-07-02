@@ -121,6 +121,9 @@
           "comment": "Vor allem für Prototypen und Experimente genutzt.",
           "children": [
             {
+              "content": "PyQt"
+            },
+            {
               "content": "Projekte",
               "children": [
                 {
@@ -170,18 +173,15 @@
         },
         {
           "content": "Webentwicklung",
+          "comment": "Fühle mich in HTML, CSS, JavaScript, PHP am wohlsten",
           "children": [
             {
-              "icon": "bootstrap-original.svg",
-              "content": "Bootstrap"
+              "icon": "html5-original.svg",
+              "content": "HTML"
             },
             {
               "icon": "css3-original.svg",
               "content": "CSS"
-            },
-            {
-              "icon": "html5-original.svg",
-              "content": "HTML"
             },
             {
               "icon": "javascript-original.svg",
@@ -190,20 +190,6 @@
                 {
                   "icon": "json-original.svg",
                   "content": "JSON"
-                }
-              ]
-            },
-            {
-              "content": "Mustache Template",
-              "icon": "mustache-original.svg"
-            },
-            {
-              "icon": "nodejs-original.svg",
-              "content": "Node.js",
-              "children": [
-                {
-                  "icon": "npm-original-wordmark.svg",
-                  "content": "npm"
                 }
               ]
             },
@@ -218,13 +204,31 @@
               ]
             },
             {
+              "icon": "nodejs-original.svg",
+              "content": "Node.js",
+              "children": [
+                {
+                  "icon": "npm-original-wordmark.svg",
+                  "content": "npm"
+                }
+              ]
+            },
+            {
+              "icon": "bootstrap-original.svg",
+              "content": "Bootstrap"
+            },
+            {
+              "content": "Mustache Template",
+              "icon": "mustache-original.svg"
+            },
+            {
               "icon": "sass-original.svg",
               "content": "Sass",
+              "comment": "Mit dieser Website neu kennengelernt.",
               "children": [
                 {
                   "icon": "sass-original.svg",
-                  "content": "SCSS",
-                  "comment": "Mit dieser Website neu kennengelernt."
+                  "content": "SCSS"
                 }
               ]
             },
@@ -233,15 +237,21 @@
               "children": [
                 {
                   "icon": "firefox-original.svg",
-                  "content": "Read Cheat"
+                  "content": "Read Cheat",
+                  "comment": "Browser-Extension für leichteres Lesen von Webseiten",
+                  "repo": "read_cheat"
                 },
                 {
                   "icon": "php-original.svg",
-                  "content": "Web-Portfolio"
+                  "content": "Web-Portfolio",
+                  "comment": "Quellcode dieser Website",
+                  "repo": "web-portfolio"
                 },
                 {
                   "icon": "wordpress-original.svg",
-                  "content": "WP Questionaire Builder"
+                  "content": "WP Questionaire Builder",
+                  "comment": "Für eine Freundin entwickelt",
+                  "repo": "wp-questionaire-builder"
                 }
               ],
               "class": "project-group"
